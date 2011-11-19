@@ -2,9 +2,8 @@
 /**
  * The template for displaying Search Results pages.
  *
- * @package WordPress
- * @subpackage Twenty_Ten
- * @since Twenty Ten 1.0
+ * @package AFDC
+ * @subpackage WP-Theme
  */
 
 get_header(); ?>
@@ -13,7 +12,7 @@ get_header(); ?>
 			<div id="content" role="main">
 
 <?php if ( have_posts() ) : ?>
-				
+
 			<div class="section-head-border">
 				<div class="section-head"><?php printf( __( 'Search: %s', 'twentyten' ), '<span>' . get_search_query() . '</span>' ); ?></div></div>
 				<?php

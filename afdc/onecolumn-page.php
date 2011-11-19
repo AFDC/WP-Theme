@@ -7,9 +7,8 @@
  * The "Template Name:" bit above allows this to be selectable
  * from a dropdown menu on the edit page screen.
  *
- * @package WordPress
- * @subpackage Twenty_Ten
- * @since Twenty Ten 1.0
+ * @package AFDC
+ * @subpackage WP-Theme
  */
 
 get_header(); ?>
