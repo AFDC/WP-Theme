@@ -176,8 +176,9 @@ div.menu,
 }
 
 #wrapper {
-        text-align:center;
-        width:1020px;
+	text-align:center;
+	margin: 0 auto;
+	width:1020px;
 }
 
 #main { background: #fff;min-height:900px; }
@@ -1550,3 +1551,9 @@ border-bottom-left-radius:6px;border-bottom-right-radius:6px;
 }
 
 .section-head span { font-style:italic; }
+
+iframe#afdc_login {
+	overflow: hidden;
+	border: none;
+	margin: 0;
+}
