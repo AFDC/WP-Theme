@@ -7,9 +7,8 @@
  * and that other 'pages' on your WordPress site will use a
  * different template.
  *
- * @package WordPress
- * @subpackage Twenty_Ten
- * @since Twenty Ten 1.0
+ * @package AFDC
+ * @subpackage WP-Theme
  */
 
 get_header(); ?>
