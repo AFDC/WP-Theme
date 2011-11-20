@@ -60,7 +60,21 @@
                                 <a href="/"><img src="http://www.afdc.com/images/afdc_logo.png" style="border: none;" /></a>
                             </div>
                             <div class="loginField loginArea">
-                                <iframe id="afdc_login" src="http://www.afdc.com/login.php" width="300" height="30" ></iframe>
+                                <div id="loginForm">
+                                    <?php if (isset($_SESSION['valid_user'])): ?>
+                                        <form name="logoutform" method="post" action="/login.php">
+                                            <input type="hidden" name="logout" />
+                                            Logged in as: <span style="text-transform:none"><a href="/activities/directory/member.php?c_id=<?php echo $_SESSION['user_c_id']; ?>" target="_top" ><?php echo $_SESSION['valid_user'] ;?></a></span>
+                                            <input class="mainoption" type=submit name="logout" value="logout">
+                                        </form>
+                                    <?php else: ?>
+                                        <form name="login" method="post" action="/login.php">
+                                            <fieldset><label for="login">Login:</label> <input type="text" id="username" name="username" class="inputBox" size="7" maxlength="30"></fieldset>
+                                            <fieldset style="margin-right: 0"><label for="password">Pass:</label> <input type="password" id="password" name="password" class="inputBox" size="7" maxlength="30"></fieldset>
+                                            <button type="submit">Go</button>
+                                        </form>
+                                    <?php endif; ?>
+                                </div>
                             </div>
                         </div>
                     </div>
