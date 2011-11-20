@@ -56,9 +56,6 @@
 		});
 	</script>
     </head>
-<!--
-	<?php print_r($_COOKIE); ?>
--->
     <body <?php body_class(); ?>>
         <div id="wrapper" class="hfeed">
             <div id="header">
