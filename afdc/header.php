@@ -35,6 +35,7 @@
         <link rel="profile" href="http://gmpg.org/xfn/11" />
         <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
         <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
     <?php
         /* We add some JavaScript to pages with the comment form
          * to support sites with threaded comments (when in use).
@@ -49,6 +50,11 @@
          */
         wp_head();
     ?>
+	<script type="text/javascript">
+		$(function() {
+			$('#loginForm').load('/login.php');
+		});
+	</script>
     </head>
     <body <?php body_class(); ?>>
         <div id="wrapper" class="hfeed">
@@ -61,19 +67,6 @@
                             </div>
                             <div class="loginField loginArea">
                                 <div id="loginForm">
-                                    <?php if (isset($_SESSION['valid_user'])): ?>
-                                        <form name="logoutform" method="post" action="/login.php">
-                                            <input type="hidden" name="logout" />
-                                            Logged in as: <span style="text-transform:none"><a href="/activities/directory/member.php?c_id=<?php echo $_SESSION['user_c_id']; ?>" target="_top" ><?php echo $_SESSION['valid_user'] ;?></a></span>
-                                            <input class="mainoption" type=submit name="logout" value="logout">
-                                        </form>
-                                    <?php else: ?>
-                                        <form name="login" method="post" action="/login.php">
-                                            <fieldset><label for="login">Login:</label> <input type="text" id="username" name="username" class="inputBox" size="7" maxlength="30"></fieldset>
-                                            <fieldset style="margin-right: 0"><label for="password">Pass:</label> <input type="password" id="password" name="password" class="inputBox" size="7" maxlength="30"></fieldset>
-                                            <button type="submit">Go</button>
-                                        </form>
-                                    <?php endif; ?>
                                 </div>
                             </div>
                         </div>

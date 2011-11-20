@@ -1554,27 +1554,14 @@ border-bottom-left-radius:6px;border-bottom-right-radius:6px;
 
 #loginForm {
 	width: 300px; height: 30px;
-	font-family: Arial;
-	font-size: 12px;
-	color: #ffffff;
-	font-weight: bold;
-	text-transform: uppercase;
-	height: 32px;
-	line-height: 32px;
-	padding:0px 6px;
+	margin: 0;
+	padding: 0;
 }
 
-#loginForm fieldset {
-	display: inline;
-	margin-right: 8px;
+#loginForm td {
+	font-family:Arial;font-size:12px;color:#fff;font-weight:bold;text-transform:uppercase;height:32px;line-height:32px;padding:0px 6px
 }
-
-#loginForm label {
-	margin-right: 5px;
-}
-
-
-#loginForm button {
-	line-height: 18px;
+#loginForm a {
+	color:#0000ff;
 }
 
